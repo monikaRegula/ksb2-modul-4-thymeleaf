@@ -7,9 +7,13 @@
 <body>
 <H1>elo melo</H1>
 <p> Hello Wrold!</p>
-<p th:text="${name}"></p>
-<p th:text="${car.getMark()}"></p>
-<p th:text="${car.getModel()}"></p>
+
+<tr th:each="car: ${cars}">
+    <td th:text="${car.getMark()}"></td><br>
+    <td th:text="${car.getModel()}"></td><br>
+    <p>=========================</p>
+</tr>
+
 
 </body>
 </html>
