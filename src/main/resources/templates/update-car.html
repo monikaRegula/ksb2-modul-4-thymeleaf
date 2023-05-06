@@ -1,0 +1,9 @@
+<form action="#" th:action="@{/update/{id}(id=${car.id})}" th:object="${car}" method="post">
+    <label for="id">Id</label>
+    <input type="text" th:field="*{id}" id="id" placeholder="Id">
+    <label for="mark">Mark</label>
+    <input type="text" th:field="*{mark}" id="mark" placeholder="Mark">
+    <label for="model">Model</label>
+    <input type="text" th:field="*{model}" id="model" placeholder="Model">
+    <input type="submit" value="Update Car">
+</form>

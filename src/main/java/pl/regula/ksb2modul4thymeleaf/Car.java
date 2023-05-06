@@ -4,6 +4,16 @@ public class Car {
 
     private String model;
     private String mark;
+    private Long id;
+
+    public Car(Long id, String model, String mark) {
+        this.model = model;
+        this.mark = mark;
+        this.id = id;
+    }
+
+    public Car() {
+    }
 
     public String getModel() {
         return model;
@@ -21,12 +31,12 @@ public class Car {
         this.mark = mark;
     }
 
-    public Car(String model, String mark) {
-        this.model = model;
-        this.mark = mark;
+    public Long getId() {
+        return id;
     }
 
-    public Car() {
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
@@ -34,6 +44,7 @@ public class Car {
         return "Car{" +
                 "model='" + model + '\'' +
                 ", mark='" + mark + '\'' +
+                ", id=" + id +
                 '}';
     }
 }
